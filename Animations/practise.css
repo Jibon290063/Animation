@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 209, 200);
+}
+
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main h3{
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #996D6D;
+    text-shadow: #474747 3px 5px 2px;
+}
+
+
+.container{
+    width: 200px;
+    height: 200px;
+    border: 2px dotted rgb(17, 58, 112);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* animation-name: circle;
+    animation-delay: .3s;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:reverse; 
+    animation-fill-mode:forwards; */
+    animation: circle 3s .2s infinite reverse linear forwards ;
+    transition: 0.2s;
+}
+
+.box1{
+     width: 150px;
+     height: 150px;
+     border: 2px dashed rgb(100, 83, 179);
+     border-radius: 50%;
+     outline: none;
+     display:flex;
+     align-items: center;
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+     animation: circleRound 3s .2s infinite alternate-reverse linear backwards ;
+} 
+
+.box2{
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background: conic-gradient(from 90deg,red 0% 14%,green 14% 28%,rgb(42, 42, 235) 28% 42%,yellow 42% 56% ,#cf5469 56% 70% , #eba117 70% 84%, #0fecbc 84% 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    animation: cricle3Round 3s .2s infinite alternate linear forwards ;
+}
+
+/* Animation Creat now  */
+@keyframes circle{
+    from{
+        transform: rotateZ(180deg);
+        border: 3px dotted goldenrod;
+        outline: none;
+
+    }
+    to{
+        transform: rotateZ(320deg);
+        border: 3px dotted rgb(231, 99, 121);
+        outline: none;
+    }
+}
+
+@keyframes circleRound{
+    from{
+        transform: rotateX(90deg);
+        border: 2px dashed rgb(100, 83, 179);;
+        width: 120px;
+        height: 120px;
+    }
+    to{
+        transform: rotateX(190deg);
+        border: 2px dashed rgb(100, 83, 179);
+      
+    }
+}
+
+@keyframes cricle3Round{
+    from{
+        transform:rotateX(90deg);
+        margin: auto;
+    }
+    to{
+        transform:rotate(180deg);
+        width: 30px;
+        height: 30px;
+        margin: auto;
+    }
+}
